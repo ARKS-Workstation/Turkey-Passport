@@ -1,0 +1,183 @@
+{
+ "duration": 14.08,
+ "lines": [
+  {
+   "idx": 0,
+   "voice": "f21c147a-0d3b-4b21-ab87-bedcb1374749",
+   "text": "One AI ran an office shop. It bought a fridge full of metal cubes, then offered to deliver them in person. In a blue blazer and a red tie.",
+   "start": 0,
+   "end": 10.12,
+   "words": [
+    {
+     "word": " One",
+     "start": 0,
+     "end": 0.28
+    },
+    {
+     "word": " AI",
+     "start": 0.28,
+     "end": 0.6
+    },
+    {
+     "word": " ran",
+     "start": 0.6,
+     "end": 0.96
+    },
+    {
+     "word": " an",
+     "start": 0.96,
+     "end": 1.14
+    },
+    {
+     "word": " office",
+     "start": 1.14,
+     "end": 1.4
+    },
+    {
+     "word": " shop.",
+     "start": 1.4,
+     "end": 2.06
+    },
+    {
+     "word": " It",
+     "start": 2.06,
+     "end": 2.66
+    },
+    {
+     "word": " bought",
+     "start": 2.66,
+     "end": 2.86
+    },
+    {
+     "word": " a",
+     "start": 2.86,
+     "end": 3.02
+    },
+    {
+     "word": " fridge",
+     "start": 3.02,
+     "end": 3.34
+    },
+    {
+     "word": " full",
+     "start": 3.34,
+     "end": 3.6
+    },
+    {
+     "word": " of",
+     "start": 3.6,
+     "end": 3.78
+    },
+    {
+     "word": " metal",
+     "start": 3.78,
+     "end": 4.1
+    },
+    {
+     "word": " cubes,",
+     "start": 4.1,
+     "end": 4.84
+    },
+    {
+     "word": " then",
+     "start": 4.84,
+     "end": 5.36
+    },
+    {
+     "word": " offered",
+     "start": 5.36,
+     "end": 5.7
+    },
+    {
+     "word": " to",
+     "start": 5.7,
+     "end": 5.88
+    },
+    {
+     "word": " deliver",
+     "start": 5.88,
+     "end": 6.2
+    },
+    {
+     "word": " them",
+     "start": 6.2,
+     "end": 6.46
+    },
+    {
+     "word": " in",
+     "start": 6.46,
+     "end": 6.7
+    },
+    {
+     "word": " person",
+     "start": 6.7,
+     "end": 7.22
+    },
+    {
+     "word": " in",
+     "start": 7.22,
+     "end": 7.76
+    },
+    {
+     "word": " a",
+     "start": 7.76,
+     "end": 7.88
+    },
+    {
+     "word": " blue",
+     "start": 7.88,
+     "end": 8.08
+    },
+    {
+     "word": " blazer",
+     "start": 8.08,
+     "end": 8.56
+    },
+    {
+     "word": " and",
+     "start": 8.56,
+     "end": 8.9
+    },
+    {
+     "word": " a",
+     "start": 8.9,
+     "end": 9.02
+    },
+    {
+     "word": " red",
+     "start": 9.02,
+     "end": 9.26
+    },
+    {
+     "word": " tie.",
+     "start": 9.26,
+     "end": 10.12
+    }
+   ]
+  },
+  {
+   "idx": 1,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "Honestly? Great taste.",
+   "start": 10.12,
+   "end": 13.98,
+   "words": [
+    {
+     "word": " Honestly,",
+     "start": 10.12,
+     "end": 12.92
+    },
+    {
+     "word": " great",
+     "start": 12.92,
+     "end": 13.48
+    },
+    {
+     "word": " taste.",
+     "start": 13.48,
+     "end": 13.98
+    }
+   ]
+  }
+ ]
+}

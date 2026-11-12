@@ -1,0 +1,122 @@
+{
+ "duration": 8.064014,
+ "lines": [
+  {
+   "idx": 0,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "Welcome to ARKS Sharks. I'm Ahmed.",
+   "start": 0.48,
+   "end": 2.8,
+   "words": [
+    {
+     "word": " Welcome",
+     "start": 0.48,
+     "end": 0.76
+    },
+    {
+     "word": " to",
+     "start": 0.76,
+     "end": 1
+    },
+    {
+     "word": " ARK",
+     "start": 1,
+     "end": 1.42
+    },
+    {
+     "word": " Sharks.",
+     "start": 1.42,
+     "end": 2.04
+    },
+    {
+     "word": " I'm",
+     "start": 2.04,
+     "end": 2.24
+    },
+    {
+     "word": " Ahmed.",
+     "start": 2.24,
+     "end": 2.8
+    }
+   ]
+  },
+  {
+   "idx": 1,
+   "voice": "f21c147a-0d3b-4b21-ab87-bedcb1374749",
+   "text": "I'm Kamran. We hunt the AI news...",
+   "start": 2.8,
+   "end": 5.46,
+   "words": [
+    {
+     "word": " I'm",
+     "start": 2.8,
+     "end": 3.18
+    },
+    {
+     "word": " Kamrar.",
+     "start": 3.18,
+     "end": 3.88
+    },
+    {
+     "word": " We",
+     "start": 3.88,
+     "end": 4.2
+    },
+    {
+     "word": " hunt",
+     "start": 4.2,
+     "end": 4.48
+    },
+    {
+     "word": " the",
+     "start": 4.48,
+     "end": 4.64
+    },
+    {
+     "word": " AI",
+     "start": 4.64,
+     "end": 4.94
+    },
+    {
+     "word": " news",
+     "start": 4.94,
+     "end": 5.46
+    }
+   ]
+  },
+  {
+   "idx": 2,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "...so you don't have to.",
+   "start": 5.46,
+   "end": 7.02,
+   "words": [
+    {
+     "word": " so",
+     "start": 5.46,
+     "end": 5.76
+    },
+    {
+     "word": " you",
+     "start": 5.76,
+     "end": 5.94
+    },
+    {
+     "word": " don't",
+     "start": 5.94,
+     "end": 6.16
+    },
+    {
+     "word": " have",
+     "start": 6.16,
+     "end": 6.4
+    },
+    {
+     "word": " to.",
+     "start": 6.4,
+     "end": 7.02
+    }
+   ]
+  }
+ ]
+}

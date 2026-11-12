@@ -1,0 +1,186 @@
+{
+ "work": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/trailer_work",
+ "logo": "/home/user/Turkey-Passport/show/brand/arks_sharks_logo_shadow.png",
+ "music_script": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/music.py",
+ "title_shot": 1,
+ "title_hit_offset": 2.8,
+ "title_logo_out_offset": 4.6,
+ "key_words": [
+  "18,000",
+  "AI",
+  "ARKS",
+  "SHARKS",
+  "CLAUDE",
+  "CHATGPT",
+  "DUBAI",
+  "BLUE",
+  "TICK",
+  "CUBES",
+  "TIE",
+  "FAILS",
+  "YALLA",
+  "SPREADSHEETS",
+  "TAXI"
+ ],
+ "shots": [
+  {
+   "clip": "/home/user/Turkey-Passport/show/trailer/clips/s1_hook.mp4",
+   "in": 0.0,
+   "out": 7.04,
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s1_dialogue.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s1_lines.json",
+   "display": [
+    "18,000 cups of water?!",
+    "From an AI drive-thru. And that's not even the craziest one."
+   ]
+  },
+  {
+   "clip": "/home/user/Turkey-Passport/show/intro/intro_plate.mp4",
+   "in": 2.6,
+   "out": 7.6,
+   "sfx": "/home/user/Turkey-Passport/show/intro/intro_plate.mp4",
+   "sfx_gain": 0.9
+  },
+  {
+   "clip": "/home/user/Turkey-Passport/show/trailer/clips/s3_intro.mp4",
+   "in": 0.25,
+   "out": 7.75,
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s3_dialogue.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s3_lines.json",
+   "display": [
+    "Welcome to ARKS Sharks. I'm Ahmed.",
+    "I'm Kamran. We hunt the AI news...",
+    "...so you don't have to."
+   ]
+  },
+  {
+   "clip": "/home/user/Turkey-Passport/show/trailer/clips/s4_rapid.mp4",
+   "in": 0.85,
+   "out": 10.08,
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s4_dialogue.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s4_lines.json",
+   "display": [
+    "Claude builds your spreadsheets now.",
+    "ChatGPT is giving businesses a blue tick.",
+    "And in Dubai? The taxi drives itself."
+   ]
+  },
+  {
+   "clip": "/home/user/Turkey-Passport/show/trailer/clips/s5_funny.mp4",
+   "in": 0.0,
+   "out": 5.62,
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_dialogue.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_lines.json",
+   "display": [
+    "One AI ran an office shop. It bought a fridge full of metal cubes, then offered to deliver them in person. In a blue blazer and a red tie.",
+    "Honestly? Great taste."
+   ]
+  },
+  {
+   "clip": "/home/user/Turkey-Passport/show/trailer/clips/s5b_ahmed_react.mp4",
+   "in": 0.0,
+   "out": 4.59,
+   "speed": 1.137,
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_dialogue.wav",
+   "dialogue_in": 5.62,
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_lines.json",
+   "display": [
+    "One AI ran an office shop. It bought a fridge full of metal cubes, then offered to deliver them in person. In a blue blazer and a red tie.",
+    "Honestly? Great taste."
+   ]
+  },
+  {
+   "clip": "/home/user/Turkey-Passport/show/trailer/clips/s5_funny.mp4",
+   "in": 10.21,
+   "out": 14.08,
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_dialogue.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_lines.json",
+   "display": [
+    "One AI ran an office shop. It bought a fridge full of metal cubes, then offered to deliver them in person. In a blue blazer and a red tie.",
+    "Honestly? Great taste."
+   ]
+  },
+  {
+   "clip": "/home/user/Turkey-Passport/show/trailer/clips/s6_signoff.mp4",
+   "in": 0.0,
+   "out": 9.05,
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s6_dialogue.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s6_lines.json",
+   "display": [
+    "New features. Funny fails. Real talk.",
+    "ARKS Sharks! Yalla... dive in!"
+   ]
+  }
+ ],
+ "overlays": [
+  {
+   "shot": 0,
+   "start": 0.0,
+   "end": 2.6,
+   "style": "Hook",
+   "text": "AI DRIVE-THRU FAIL"
+  },
+  {
+   "shot": 2,
+   "start": 0.2,
+   "end": 7.3,
+   "style": "Name",
+   "text": "AHMED",
+   "x": 90,
+   "y": 1190
+  },
+  {
+   "shot": 2,
+   "start": 2.5,
+   "end": 7.3,
+   "style": "Name",
+   "text": "KAMRAN",
+   "x": 610,
+   "y": 1190
+  },
+  {
+   "shot": 3,
+   "start": 0.3,
+   "end": 2.65,
+   "style": "Hook",
+   "text": "CLAUDE SHEETS"
+  },
+  {
+   "shot": 3,
+   "start": 2.65,
+   "end": 5.85,
+   "style": "Hook",
+   "text": "CHATGPT BLUE TICK"
+  },
+  {
+   "shot": 3,
+   "start": 5.85,
+   "end": 9.2,
+   "style": "Hook",
+   "text": "DUBAI ROBOTAXIS"
+  },
+  {
+   "shot": 4,
+   "start": 0.0,
+   "end": 5.6,
+   "style": "Hook",
+   "text": "AI SHOPKEEPER FAIL"
+  }
+ ],
+ "endcard": {
+  "dur": 3.2,
+  "bg": "/home/user/Turkey-Passport/show/trailer/keyframes/talkshow_studio.jpg",
+  "texts": [
+   {
+    "text": "{\\c&H00FFE500&}EPISODE 1",
+    "start": 0.5,
+    "y": 1160
+   },
+   {
+    "text": "COMING SOON",
+    "start": 0.8,
+    "y": 1260
+   }
+  ]
+ }
+}

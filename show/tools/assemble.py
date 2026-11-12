@@ -10,9 +10,11 @@ VF = "scale=1080:1920:flags=lanczos,unsharp=5:5:0.6,eq=contrast=1.04:saturation=
 t0 = 0.0; vparts, dparts, sparts, events = [], [], [], []
 for i, s in enumerate(plan["shots"]):
     a, b = s["in"], s["out"]; d = round((b - a) * FPS) / FPS
-    v = W / f"v{i}.mp4"; ff("-ss", a, "-i", s["clip"], "-t", d, "-an", "-vf", VF, "-c:v", "libx264", "-preset", "medium", "-crf", "16", v)
+    v = W / f"v{i}.mp4"; vf = (f"setpts=PTS*{s['speed']}," if s.get("speed") else "") + VF
+    ff("-ss", a, "-i", s["clip"], "-t", d, "-an", "-vf", vf, "-c:v", "libx264", "-preset", "medium", "-crf", "16", v)
+    ad = s.get("dialogue_in", a)
     def audio_slice(src, dst, gain=1.0):
-        if src: ff("-ss", a, "-i", src, "-t", d, "-ac", "1", "-ar", SR, "-af", f"apad,atrim=0:{d},volume={gain}", dst)
+        if src: ff("-ss", ad if src == s.get("dialogue") else a, "-i", src, "-t", d, "-ac", "1", "-ar", SR, "-af", f"apad,atrim=0:{d},volume={gain}", dst)
         else: ff("-f", "lavfi", "-i", f"anullsrc=r={SR}:cl=mono", "-t", d, dst)
     dp, sp = W / f"d{i}.wav", W / f"s{i}.wav"
     audio_slice(s.get("dialogue"), dp); audio_slice(s.get("sfx"), sp, s.get("sfx_gain", 1.0))
@@ -24,7 +26,7 @@ for i, s in enumerate(plan["shots"]):
         k0 = 0
         for c in chunks:
             k1 = k0 + len(c); ws = words[min(ns - 1, math.floor(k0 * ns / nw))]; we = words[min(ns - 1, max(0, math.ceil(k1 * ns / nw) - 1))]
-            st, en = ws["start"] - a + t0, we["end"] - a + t0
+            st, en = ws["start"] - ad + t0, we["end"] - ad + t0
             if en > t0 and st < t0 + d: events.append((max(st, t0), min(en + 0.15, t0 + d), " ".join(c), ln.get("who")))
             k0 = k1
     s["t0"] = t0; t0 += d
@@ -62,7 +64,7 @@ ass = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920"
        "Style: Cap,Inter Display Black,82,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,6,3,2,90,90,470,1",
        "Style: Hook,Inter Display Black,64,&H00000000,&H00000000,&H00FFE500,&H00FFE500,0,0,0,0,100,100,2,0,3,18,0,8,80,80,250,1",
        "Style: Name,Inter Display ExtraBold,46,&H00FFFFFF,&H00FFFFFF,&H00402010,&H00402010,0,0,0,0,100,100,3,0,3,12,0,1,0,0,0,1",
-       "Style: Tag,Inter Display Black,56,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,6,0,1,4,2,8,60,60,0,1",
+       "Style: Tag,Inter Display Black,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,6,0,1,4,2,8,60,60,0,1",
        "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 for st, en, txt, who in events:
     ass.append(f"Dialogue: 1,{ts(st)},{ts(en)},Cap,,0,0,0,,{{\\fad(40,40)\\fscx92\\fscy92\\t(0,90,\\fscx100\\fscy100)}}{colorize(txt.upper())}")
@@ -74,9 +76,9 @@ for o in ec.get("texts", []):
     ass.append(f"Dialogue: 2,{ts(TOTAL_MAIN + o['start'])},{ts(TOTAL)},Tag,,0,0,0,,{{\\fad(300,0)\\pos(540,{o['y']})}}{o['text']}")
 assf = W / "overlay.ass"; assf.write_text("\n".join(ass) + "\n")
 # --- title logo slam on the title shot
-lg_t = HIT; vfin = W / "video_titled.mp4"
+lg_t = HIT; plan["title_logo_out"] = plan["shots"][plan["title_shot"]]["t0"] + plan["title_logo_out_offset"]; vfin = W / "video_titled.mp4"
 ff("-i", vall, "-loop", "1", "-t", TOTAL, "-i", logo, "-filter_complex",
-   f"[1:v]format=rgba,scale=w='trunc(880*(1+0.5*exp(-(t-{lg_t:.3f})*9))/2)*2':h=-2:eval=frame,"
+   f"[1:v]format=rgba,scale=w='trunc(880*(1+0.5*exp(-max(0\,t-{lg_t:.3f})*9))/2)*2':h=-2:eval=frame,"
    f"fade=in:st={lg_t:.3f}:d=0.12:alpha=1,fade=out:st={plan['title_logo_out']:.3f}:d=0.25:alpha=1[lg];"
    f"[0:v][lg]overlay=x=(W-w)/2:y=(H-h)/2-260:enable='between(t,{lg_t:.3f},{plan['title_logo_out']+0.3:.3f})',"
    f"ass={assf}:fontsdir=/usr/share/fonts/opentype/inter,format=yuv420p",
@@ -86,7 +88,7 @@ mix = W / "mix.wav"
 ff("-i", dall, "-i", sall, "-i", mus, "-filter_complex",
    "[0:a]highpass=f=80,acompressor=threshold=-20dB:ratio=3:attack=5:release=80,volume=1.6,asplit=2[d][key];"
    "[2:a]volume=0.42[m];[m][key]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=300[md];"
-   "[1:a]volume=0.8[s];[d][s][md]amix=inputs=3:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5:LRA=11",
+   "[1:a]volume=0.8[s];[d][s][md]amix=inputs=3:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5:LRA=11,volume=1.7dB,alimiter=limit=0.84:level=false",
    "-ar", SR, "-ac", 2, mix)
 ff("-i", vfin, "-i", mix, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", OUT)
 print("OUT", OUT, f"{dur(OUT):.2f}s", "| title hit", f"{HIT:.2f}", "| main", f"{TOTAL_MAIN:.2f}")

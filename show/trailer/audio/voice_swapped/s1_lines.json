@@ -1,0 +1,108 @@
+{
+ "duration": 7.072018,
+ "lines": [
+  {
+   "voice": "f21c147a-0d3b-4b21-ab87-bedcb1374749",
+   "text": "Eighteen THOUSAND cups of water?!",
+   "start": 0.1,
+   "end": 2.34,
+   "words": [
+    {
+     "word": " 18",
+     "start": 0.1,
+     "end": 0.52
+    },
+    {
+     "word": ",000",
+     "start": 0.52,
+     "end": 1.28
+    },
+    {
+     "word": " cups",
+     "start": 1.28,
+     "end": 1.64
+    },
+    {
+     "word": " of",
+     "start": 1.64,
+     "end": 1.9
+    },
+    {
+     "word": " water",
+     "start": 1.9,
+     "end": 2.34
+    }
+   ],
+   "idx": 0
+  },
+  {
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "From an AI drive-thru. And that's not even the craziest one.",
+   "start": 2.34,
+   "end": 6.98,
+   "words": [
+    {
+     "word": " from",
+     "start": 2.34,
+     "end": 3.04
+    },
+    {
+     "word": " an",
+     "start": 3.04,
+     "end": 3.2
+    },
+    {
+     "word": " AI",
+     "start": 3.2,
+     "end": 3.48
+    },
+    {
+     "word": " drive",
+     "start": 3.48,
+     "end": 3.94
+    },
+    {
+     "word": "-through.",
+     "start": 3.94,
+     "end": 4.48
+    },
+    {
+     "word": " And",
+     "start": 4.48,
+     "end": 5.16
+    },
+    {
+     "word": " that's",
+     "start": 5.16,
+     "end": 5.38
+    },
+    {
+     "word": " not",
+     "start": 5.38,
+     "end": 5.54
+    },
+    {
+     "word": " even",
+     "start": 5.54,
+     "end": 5.82
+    },
+    {
+     "word": " the",
+     "start": 5.82,
+     "end": 6
+    },
+    {
+     "word": " craziest",
+     "start": 6,
+     "end": 6.42
+    },
+    {
+     "word": " one.",
+     "start": 6.42,
+     "end": 6.98
+    }
+   ],
+   "idx": 1
+  }
+ ]
+}
