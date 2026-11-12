@@ -1,7 +1,14 @@
 """Seedance reference-to-video on ModelArk: local images/audio as base64 data URIs, poll, download, frames."""
 import argparse, base64, json, subprocess, sys, time, importlib.util
 from pathlib import Path
-S = "/root/.claude/skills/synced/3b0eece3-fd12-43ee-866a-2402a8892024_d739a2fa-97f6-4152-aee6-295e2c60db28/modelark/scripts/ark.py"
+import glob, os
+def _ark_path():
+    """Locate the ModelArk skill's ark.py (env ARK_PY overrides)."""
+    if os.environ.get("ARK_PY"): return os.environ["ARK_PY"]
+    hits = sorted(glob.glob(os.path.expanduser("~/.claude/skills/**/modelark/scripts/ark.py"), recursive=True))
+    if not hits: raise SystemExit("ModelArk skill not found: set ARK_PY=/path/to/ark.py")
+    return hits[0]
+S = _ark_path()
 spec = importlib.util.spec_from_file_location("ark", S); ark = importlib.util.module_from_spec(spec); spec.loader.exec_module(ark)
 MIME = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".mp3": "audio/mpeg", ".wav": "audio/wav"}
 def durl(p):

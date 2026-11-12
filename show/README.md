@@ -5,11 +5,14 @@ AI talk show with Ahmed and Kamran in a Dubai studio. Vertical 9:16, 1080×1920,
 ## Deliverables
 | File | What it is |
 |---|---|
-| `trailer/ARKS_Sharks_trailer_9x16.mp4` | Trailer, 55 s: hook, logo slam, intro, rapid-fire news, funny bit, sign-off, end card |
-| `intro/ARKS_Sharks_intro_9x16.mp4` | Fixed episode opener, 9.7 s: holographic shark over the Burj Khalifa, into the studio, logo and sound logo |
+| `final/ARKS_Sharks_Trailer_v1_APPROVED_9x16.mp4` | **Approved** trailer, 55 s: hook, logo slam, intro, rapid-fire news, funny bit, sign-off, end card |
+| `final/ARKS_Sharks_Episode_Intro_v1_9x16.mp4` | Fixed episode opener, 9.7 s: holographic shark over the Burj Khalifa, into the studio, logo and sound logo |
 | `brand/arks_sharks_logo_shadow.png` | Logo with a transparent background and a soft shadow (for overlays) |
 | `brand/arks_sharks_logo_v1.jpg` | Original logo on black |
 | `trailer_script.md`, `episode01_script.md` | Scripts with sources |
+
+## Making more videos
+Follow the project skill `.claude/skills/arks-sharks-video/SKILL.md`. It is the approved recipe, step by step.
 
 ## How it was made
 1. **Characters and set:** Seedream 5.0 (BytePlus ModelArk). Studio and keyframes are in `trailer/keyframes/`.

@@ -4,7 +4,8 @@ import subprocess, sys, wave, numpy as np, noisereduce as nr
 from nara_wpe.wpe import wpe
 from nara_wpe.utils import stft, istft
 SR = 44100; src, dst = sys.argv[1], sys.argv[2]; pre = "--pre" in sys.argv
-MODEL = "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/ext/rnnoise-models/beguiling-drafter-2018-08-30/bd.rnnn"
+from pathlib import Path
+MODEL = str(Path(__file__).with_name("models") / "bd.rnnn")  # RNNoise "beguiling-drafter" (voice + recording noise)
 def load(p, sr=SR):
     raw = subprocess.run(["ffmpeg", "-v", "error", "-i", p, "-ac", "1", "-ar", str(sr), "-f", "s16le", "-"], capture_output=True).stdout
     return np.frombuffer(raw, np.int16).astype(np.float32) / 32768
