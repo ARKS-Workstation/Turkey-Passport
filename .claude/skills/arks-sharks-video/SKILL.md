@@ -6,6 +6,8 @@ description: Make an ARKS Sharks trailer, episode or short (Ahmed and Kamran, AI
 # ARKS Sharks video recipe
 
 The approved reference is `show/final/ARKS_Sharks_Trailer_v1_APPROVED_9x16.mp4`. Match its look, sound and pacing.
+The brand rules (logo, colours, type, characters, studio, graphics, sound, tone) are in the CI guidelines:
+`show/brand/ARKS_Sharks_CI_Guidelines_v1.pdf` (rebuild with `python3 show/brand/ci/build_ci.py`).
 All tools are in `show/tools/` and run from the repository root.
 
 ## Before generating (owner's rules)
