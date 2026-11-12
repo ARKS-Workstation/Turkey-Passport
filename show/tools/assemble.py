@@ -1,7 +1,7 @@
 """Assemble the ARKS Sharks trailer from a plan JSON. Usage: assemble.py PLAN.json OUT.mp4"""
 import json, math, re, subprocess, sys, wave, numpy as np
 from pathlib import Path
-plan = json.load(open(sys.argv[1])); OUT = Path(sys.argv[2]); W = Path(plan["work"]); W.mkdir(parents=True, exist_ok=True)
+plan = json.load(open(sys.argv[1])); OUT = Path(sys.argv[2]); W = Path(plan["work"]).resolve(); W.mkdir(parents=True, exist_ok=True)
 SR, FPS = 44100, 24
 def run(*a): subprocess.run([str(x) for x in a], check=True)
 def ff(*a): run("ffmpeg", "-v", "error", "-y", *a)
@@ -91,16 +91,18 @@ if wl:
     ff("-i", vall, *inputs, "-filter_complex", ";".join(fc), "-map", last, "-c:v", "libx264", "-preset", "medium", "-crf", "16", "-pix_fmt", "yuv420p", vw)
     vall = vw
 # --- title logo slam on the title shot
-lg_t = HIT
-if plan.get("title_shot") is None:
-    plan["title_shot"] = 0; plan["title_logo_out_offset"] = -1.0; lg_t = -10.0
-plan["title_logo_out"] = plan["shots"][plan["title_shot"]]["t0"] + plan["title_logo_out_offset"]; vfin = W / "video_titled.mp4"
-ff("-i", vall, "-loop", "1", "-t", TOTAL, "-i", logo, "-filter_complex",
-   f"[1:v]format=rgba,scale=w='trunc(880*(1+0.5*exp(-max(0\,t-{lg_t:.3f})*9))/2)*2':h=-2:eval=frame,"
-   f"fade=in:st={lg_t:.3f}:d=0.12:alpha=1,fade=out:st={plan['title_logo_out']:.3f}:d=0.25:alpha=1[lg];"
-   f"[0:v][lg]overlay=x=(W-w)/2:y=(H-h)/2-260:enable='between(t,{lg_t:.3f},{plan['title_logo_out']+0.3:.3f})',"
-   f"ass={assf}:fontsdir=/usr/share/fonts/opentype/inter,format=yuv420p",
-   "-c:v", "libx264", "-preset", "medium", "-crf", "17", vfin)
+lg_t = HIT; vfin = W / "video_titled.mp4"; ASSF = f"ass={assf}:fontsdir=/usr/share/fonts/opentype/inter,format=yuv420p"
+if plan.get("title_shot") is None:  # no logo slam: burn captions/overlays only
+    ff("-i", vall, "-vf", ASSF, "-c:v", "libx264", "-preset", "medium", "-crf", "17", vfin)
+else:
+    plan["title_logo_out"] = plan["shots"][plan["title_shot"]]["t0"] + plan["title_logo_out_offset"]
+    plan["title_logo_out"] = plan["shots"][plan["title_shot"]]["t0"] + plan["title_logo_out_offset"]; vfin = W / "video_titled.mp4"
+    ff("-i", vall, "-loop", "1", "-t", TOTAL, "-i", logo, "-filter_complex",
+       f"[1:v]format=rgba,scale=w='trunc(880*(1+0.5*exp(-max(0\,t-{lg_t:.3f})*9))/2)*2':h=-2:eval=frame,"
+       f"fade=in:st={lg_t:.3f}:d=0.12:alpha=1,fade=out:st={plan['title_logo_out']:.3f}:d=0.25:alpha=1[lg];"
+       f"[0:v][lg]overlay=x=(W-w)/2:y=(H-h)/2-260:enable='between(t,{lg_t:.3f},{plan['title_logo_out']+0.3:.3f})',"
+       f"ass={assf}:fontsdir=/usr/share/fonts/opentype/inter,format=yuv420p",
+       "-c:v", "libx264", "-preset", "medium", "-crf", "17", vfin)
 # --- mix: dialogue + sfx + ducked music, -14 LUFS
 mix = W / "mix.wav"
 ff("-i", dall, "-i", sall, "-i", mus, "-filter_complex",

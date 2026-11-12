@@ -1,0 +1,9 @@
+cleaned: show/tests/conv20/audio/vc/B_src.wav.clean.wav
+STT: By 2030, the RTA wants a quarter of all trips driverless. One in four taxis. And nobody to argue with about the route. Habibi, you'd argue with the car.
+line 0: 0.18-4.74  By 2030, the RTA wants a quarter of all trips driverless.
+line 1: 4.74-8.66  One in four taxis. And nobody to argue with about the route.
+line 2: 8.66-10.78  Habibi, you'd argue with the car.
+seg 0: 0.06-4.68s -> 4.60s converted
+seg 1: 4.62-8.60s -> 3.97s converted
+seg 2: 8.54-11.28s -> 2.72s converted
+dialogue: show/tests/conv20/audio/vc/B_dialogue.wav

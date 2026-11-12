@@ -1,0 +1,177 @@
+{
+ "duration": 13.056009,
+ "lines": [
+  {
+   "idx": 0,
+   "voice": "f21c147a-0d3b-4b21-ab87-bedcb1374749",
+   "text": "By 2030, the RTA wants a quarter of all trips driverless.",
+   "start": 0.18,
+   "end": 4.74,
+   "words": [
+    {
+     "word": " By",
+     "start": 0.18,
+     "end": 0.38
+    },
+    {
+     "word": " 2030,",
+     "start": 0.38,
+     "end": 1.62
+    },
+    {
+     "word": " the",
+     "start": 1.62,
+     "end": 1.72
+    },
+    {
+     "word": " RTA",
+     "start": 1.72,
+     "end": 2.14
+    },
+    {
+     "word": " wants",
+     "start": 2.14,
+     "end": 2.44
+    },
+    {
+     "word": " a",
+     "start": 2.44,
+     "end": 2.62
+    },
+    {
+     "word": " quarter",
+     "start": 2.62,
+     "end": 2.88
+    },
+    {
+     "word": " of",
+     "start": 2.88,
+     "end": 3.1
+    },
+    {
+     "word": " all",
+     "start": 3.1,
+     "end": 3.38
+    },
+    {
+     "word": " trips",
+     "start": 3.38,
+     "end": 3.76
+    },
+    {
+     "word": " driverless.",
+     "start": 3.76,
+     "end": 4.74
+    }
+   ]
+  },
+  {
+   "idx": 1,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "One in four taxis... and nobody to argue with about the route!",
+   "start": 4.74,
+   "end": 8.66,
+   "words": [
+    {
+     "word": " One",
+     "start": 4.74,
+     "end": 5.12
+    },
+    {
+     "word": " in",
+     "start": 5.12,
+     "end": 5.3
+    },
+    {
+     "word": " four",
+     "start": 5.3,
+     "end": 5.52
+    },
+    {
+     "word": " taxis.",
+     "start": 5.52,
+     "end": 6.28
+    },
+    {
+     "word": " And",
+     "start": 6.28,
+     "end": 6.78
+    },
+    {
+     "word": " nobody",
+     "start": 6.78,
+     "end": 7.14
+    },
+    {
+     "word": " to",
+     "start": 7.14,
+     "end": 7.32
+    },
+    {
+     "word": " argue",
+     "start": 7.32,
+     "end": 7.6
+    },
+    {
+     "word": " with",
+     "start": 7.6,
+     "end": 7.78
+    },
+    {
+     "word": " about",
+     "start": 7.78,
+     "end": 7.98
+    },
+    {
+     "word": " the",
+     "start": 7.98,
+     "end": 8.12
+    },
+    {
+     "word": " route.",
+     "start": 8.12,
+     "end": 8.66
+    }
+   ]
+  },
+  {
+   "idx": 2,
+   "voice": "f21c147a-0d3b-4b21-ab87-bedcb1374749",
+   "text": "Habibi, you'd argue with the car!",
+   "start": 8.66,
+   "end": 10.78,
+   "words": [
+    {
+     "word": " Habibi,",
+     "start": 8.66,
+     "end": 9.32
+    },
+    {
+     "word": " you'd",
+     "start": 9.32,
+     "end": 9.54
+    },
+    {
+     "word": " argue",
+     "start": 9.54,
+     "end": 9.82
+    },
+    {
+     "word": " with",
+     "start": 9.82,
+     "end": 10
+    },
+    {
+     "word": " the",
+     "start": 10,
+     "end": 10.12
+    },
+    {
+     "word": " car.",
+     "start": 10.12,
+     "end": 10.78
+    }
+   ]
+  }
+ ]
+}

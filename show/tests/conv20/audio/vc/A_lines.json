@@ -1,0 +1,182 @@
+{
+ "duration": 12.064014,
+ "lines": [
+  {
+   "idx": 0,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "Kamran, would you get in a taxi with no driver?",
+   "start": 0.2,
+   "end": 3.04,
+   "words": [
+    {
+     "word": " Kamar,",
+     "start": 0.2,
+     "end": 0.82
+    },
+    {
+     "word": " would",
+     "start": 0.82,
+     "end": 1.12
+    },
+    {
+     "word": " you",
+     "start": 1.12,
+     "end": 1.26
+    },
+    {
+     "word": " get",
+     "start": 1.26,
+     "end": 1.44
+    },
+    {
+     "word": " in",
+     "start": 1.44,
+     "end": 1.56
+    },
+    {
+     "word": " a",
+     "start": 1.56,
+     "end": 1.66
+    },
+    {
+     "word": " taxi",
+     "start": 1.66,
+     "end": 1.98
+    },
+    {
+     "word": " with",
+     "start": 1.98,
+     "end": 2.2
+    },
+    {
+     "word": " no",
+     "start": 2.2,
+     "end": 2.4
+    },
+    {
+     "word": " driver?",
+     "start": 2.4,
+     "end": 3.04
+    }
+   ]
+  },
+  {
+   "idx": 1,
+   "voice": "f21c147a-0d3b-4b21-ab87-bedcb1374749",
+   "text": "Mate, you already can! Umm Suqeim and Jumeirah, since March.",
+   "start": 3.04,
+   "end": 8.06,
+   "words": [
+    {
+     "word": " Mate,",
+     "start": 3.04,
+     "end": 4.02
+    },
+    {
+     "word": " you",
+     "start": 4.02,
+     "end": 4.1
+    },
+    {
+     "word": " already",
+     "start": 4.1,
+     "end": 4.48
+    },
+    {
+     "word": " can.",
+     "start": 4.48,
+     "end": 5.22
+    },
+    {
+     "word": " Umsokeer",
+     "start": 5.22,
+     "end": 6.18
+    },
+    {
+     "word": " and",
+     "start": 6.18,
+     "end": 6.36
+    },
+    {
+     "word": " Jumeirah",
+     "start": 6.36,
+     "end": 6.84
+    },
+    {
+     "word": " since",
+     "start": 6.84,
+     "end": 7.26
+    },
+    {
+     "word": " March.",
+     "start": 7.26,
+     "end": 8.06
+    }
+   ]
+  },
+  {
+   "idx": 2,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "Book it on Uber or Apollo Go... and it just drives.",
+   "start": 8.06,
+   "end": 11.98,
+   "words": [
+    {
+     "word": " Book",
+     "start": 8.06,
+     "end": 8.58
+    },
+    {
+     "word": " it",
+     "start": 8.58,
+     "end": 8.7
+    },
+    {
+     "word": " on",
+     "start": 8.7,
+     "end": 8.86
+    },
+    {
+     "word": " Uber",
+     "start": 8.86,
+     "end": 9.22
+    },
+    {
+     "word": " or",
+     "start": 9.22,
+     "end": 9.42
+    },
+    {
+     "word": " Apollo",
+     "start": 9.42,
+     "end": 9.8
+    },
+    {
+     "word": " Go",
+     "start": 9.8,
+     "end": 10.1
+    },
+    {
+     "word": " and",
+     "start": 10.1,
+     "end": 11.1
+    },
+    {
+     "word": " it",
+     "start": 11.1,
+     "end": 11.22
+    },
+    {
+     "word": " just",
+     "start": 11.22,
+     "end": 11.42
+    },
+    {
+     "word": " drives.",
+     "start": 11.42,
+     "end": 11.98
+    }
+   ]
+  }
+ ]
+}

@@ -1,1 +1,7 @@
 task  : cgt-20261113042024-4tn9z
+status: succeeded | model: dreamina-seedance-2-0-260128 | tokens: 281700 | seed: 57646 | dur: 13 | res: 720p | ratio: 9:16 | 307s
+saved : show/tests/conv20/clips/clipB.mp4
+[image2 @ 0x55a105554200] Cannot write more than one file with the same name. Are you missing the -update option or a sequence pattern?
+[vost#0:0/mjpeg @ 0x55a10550f1c0] Error submitting a packet to the muxer: Invalid argument
+[out#0/image2 @ 0x55a10550e180] Error muxing a packet
+sheet : show/tests/conv20/clips/clipB_frames/sheet.jpg

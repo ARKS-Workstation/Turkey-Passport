@@ -1,0 +1,9 @@
+cleaned: show/tests/conv20/audio/vc/A_src.wav.clean.wav
+STT: Kamar, would you get in a taxi with no driver? Mate, you already can. Umsokeer and Jumeirah since March. Book it on Uber or Apollo Go and it just drives.
+line 0: 0.20-3.04  Kamar, would you get in a taxi with no driver?
+line 1: 3.04-8.06  Mate, you already can. Umsokeer and Jumeirah since March.
+line 2: 8.06-11.98  Book it on Uber or Apollo Go and it just drives.
+seg 0: 0.08-2.98s -> 2.82s converted
+seg 1: 2.92-8.00s -> 5.02s converted
+seg 2: 7.94-12.06s -> 4.08s converted
+dialogue: show/tests/conv20/audio/vc/A_dialogue.wav
