@@ -35,6 +35,9 @@ Expressions on both sheets: neutral smile, speaking, laughing, surprised, thinki
 ## Show
 - Topic: AI
 - Format: 9:16 vertical
-- Voices: English (UK) with an Arabic accent; each host's own Cartesia voice
+- Voices: English (UK) with an Arabic accent; each host's own Cartesia voice (model `sonic-3`)
+  - Ahmed: Cartesia voice `c1063679-503f-4961-b8ed-aab0ae1d924b`
+  - Kamran: Cartesia voice `f21c147a-0d3b-4b21-ab87-bedcb1374749`
+  - Test lines: `voices/ahmed_voice_test.wav`, `voices/kamran_voice_test.wav`
 
 All images generated with BytePlus ModelArk Seedream 5.0 (`seedream-5-0-260128`).
