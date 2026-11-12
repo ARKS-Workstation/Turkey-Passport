@@ -27,8 +27,8 @@
    "clip": "/home/user/Turkey-Passport/show/trailer/clips/s1_hook.mp4",
    "in": 0.0,
    "out": 7.04,
-   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s1_dialogue.wav",
-   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s1_lines.json",
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s1_clean.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s1_lines.json",
    "display": [
     "18,000 cups of water?!",
     "From an AI drive-thru. And that's not even the craziest one."
@@ -45,8 +45,8 @@
    "clip": "/home/user/Turkey-Passport/show/trailer/clips/s3_intro.mp4",
    "in": 0.25,
    "out": 7.75,
-   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s3_dialogue.wav",
-   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s3_lines.json",
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s3_clean.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s3_lines.json",
    "display": [
     "Welcome to ARKS Sharks. I'm Ahmed.",
     "I'm Kamran. We hunt the AI news...",
@@ -57,8 +57,8 @@
    "clip": "/home/user/Turkey-Passport/show/trailer/clips/s4_rapid.mp4",
    "in": 0.85,
    "out": 10.08,
-   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s4_dialogue.wav",
-   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s4_lines.json",
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s4_clean.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s4_lines.json",
    "display": [
     "Claude builds your spreadsheets now.",
     "ChatGPT is giving businesses a blue tick.",
@@ -69,8 +69,8 @@
    "clip": "/home/user/Turkey-Passport/show/trailer/clips/s5_funny.mp4",
    "in": 0.0,
    "out": 5.62,
-   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_dialogue.wav",
-   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_lines.json",
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s5_clean.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s5_lines.json",
    "display": [
     "One AI ran an office shop. It bought a fridge full of metal cubes, then offered to deliver them in person. In a blue blazer and a red tie.",
     "Honestly? Great taste."
@@ -81,9 +81,9 @@
    "in": 0.0,
    "out": 4.59,
    "speed": 1.137,
-   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_dialogue.wav",
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s5_clean.wav",
    "dialogue_in": 5.62,
-   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_lines.json",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s5_lines.json",
    "display": [
     "One AI ran an office shop. It bought a fridge full of metal cubes, then offered to deliver them in person. In a blue blazer and a red tie.",
     "Honestly? Great taste."
@@ -93,8 +93,8 @@
    "clip": "/home/user/Turkey-Passport/show/trailer/clips/s5_funny.mp4",
    "in": 10.21,
    "out": 14.08,
-   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_dialogue.wav",
-   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s5_lines.json",
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s5_clean.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s5_lines.json",
    "display": [
     "One AI ran an office shop. It bought a fridge full of metal cubes, then offered to deliver them in person. In a blue blazer and a red tie.",
     "Honestly? Great taste."
@@ -104,8 +104,8 @@
    "clip": "/home/user/Turkey-Passport/show/trailer/clips/s6_signoff.mp4",
    "in": 0.0,
    "out": 9.05,
-   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s6_dialogue.wav",
-   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc/s6_lines.json",
+   "dialogue": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s6_clean.wav",
+   "lines": "/tmp/claude-0/-home-user-Turkey-Passport/d3529a6e-19ac-5ab0-8b77-cde3464aacdb/scratchpad/vc3/s6_lines.json",
    "display": [
     "New features. Funny fails. Real talk.",
     "ARKS Sharks! Yalla... dive in!"

@@ -86,7 +86,7 @@ ff("-i", vall, "-loop", "1", "-t", TOTAL, "-i", logo, "-filter_complex",
 # --- mix: dialogue + sfx + ducked music, -14 LUFS
 mix = W / "mix.wav"
 ff("-i", dall, "-i", sall, "-i", mus, "-filter_complex",
-   "[0:a]highpass=f=80,acompressor=threshold=-20dB:ratio=3:attack=5:release=80,volume=1.6,asplit=2[d][key];"
+   "[0:a]volume=1.25,asplit=2[d][key];"
    "[2:a]volume=0.42[m];[m][key]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=300[md];"
    "[1:a]volume=0.8[s];[d][s][md]amix=inputs=3:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5:LRA=11,volume=1.7dB,alimiter=limit=0.84:level=false",
    "-ar", SR, "-ac", 2, mix)

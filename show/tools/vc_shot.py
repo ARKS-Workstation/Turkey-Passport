@@ -8,6 +8,10 @@ clip, prefix, specs = sys.argv[1], Path(sys.argv[2]), [s.split("|", 1) for s in 
 prefix.parent.mkdir(parents=True, exist_ok=True)
 src = prefix.with_name(prefix.name + "_src.wav")
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", clip, "-vn", "-ac", "1", "-ar", str(SR), str(src)], check=True)
+import os
+if os.environ.get("VC_PRECLEAN"):  # de-reverb + denoise the animation audio before voice conversion
+    subprocess.run(["python3", str(Path(__file__).with_name("clean_voice.py")), str(src), str(src) + ".clean.wav", "--pre"], check=True)
+    os.replace(str(src) + ".clean.wav", src)
 def curl_json(args): return json.loads(subprocess.run(["curl", "-sS", "-m", "120"] + args, capture_output=True, text=True).stdout)
 H = ["-H", "X-API-Key: proxy-injected", "-H", "Cartesia-Version: 2025-04-16"]
 stt = curl_json(["https://api.cartesia.ai/stt"] + H + ["-F", f"file=@{src}", "-F", "model=ink-whisper", "-F", "language=en", "-F", "timestamp_granularities[]=word"])

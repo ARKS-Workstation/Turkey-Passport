@@ -1,0 +1,127 @@
+{
+ "duration": 10.08,
+ "lines": [
+  {
+   "idx": 0,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "Claude builds your spreadsheets now.",
+   "start": 1.2,
+   "end": 3.44,
+   "words": [
+    {
+     "word": " Claude",
+     "start": 1.2,
+     "end": 1.62
+    },
+    {
+     "word": " builds",
+     "start": 1.62,
+     "end": 2
+    },
+    {
+     "word": " your",
+     "start": 2,
+     "end": 2.18
+    },
+    {
+     "word": " spreadsheets",
+     "start": 2.18,
+     "end": 2.9
+    },
+    {
+     "word": " now.",
+     "start": 2.9,
+     "end": 3.44
+    }
+   ]
+  },
+  {
+   "idx": 1,
+   "voice": "f21c147a-0d3b-4b21-ab87-bedcb1374749",
+   "text": "ChatGPT is giving businesses a blue tick.",
+   "start": 3.44,
+   "end": 6.58,
+   "words": [
+    {
+     "word": " ChatGPT",
+     "start": 3.44,
+     "end": 4.38
+    },
+    {
+     "word": " is",
+     "start": 4.38,
+     "end": 4.62
+    },
+    {
+     "word": " giving",
+     "start": 4.62,
+     "end": 4.86
+    },
+    {
+     "word": " businesses",
+     "start": 4.86,
+     "end": 5.36
+    },
+    {
+     "word": " a",
+     "start": 5.36,
+     "end": 5.76
+    },
+    {
+     "word": " blue",
+     "start": 5.76,
+     "end": 5.96
+    },
+    {
+     "word": " tag.",
+     "start": 5.96,
+     "end": 6.58
+    }
+   ]
+  },
+  {
+   "idx": 2,
+   "voice": "c1063679-503f-4961-b8ed-aab0ae1d924b",
+   "text": "And in Dubai? The taxi drives itself.",
+   "start": 6.58,
+   "end": 9.98,
+   "words": [
+    {
+     "word": " And",
+     "start": 6.58,
+     "end": 7
+    },
+    {
+     "word": " in",
+     "start": 7,
+     "end": 7.16
+    },
+    {
+     "word": " Dubai,",
+     "start": 7.16,
+     "end": 7.9
+    },
+    {
+     "word": " the",
+     "start": 7.9,
+     "end": 8.44
+    },
+    {
+     "word": " taxi",
+     "start": 8.44,
+     "end": 8.82
+    },
+    {
+     "word": " drives",
+     "start": 8.82,
+     "end": 9.28
+    },
+    {
+     "word": " itself.",
+     "start": 9.28,
+     "end": 9.98
+    }
+   ]
+  }
+ ]
+}

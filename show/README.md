@@ -19,10 +19,14 @@ AI talk show with Ahmed and Kamran in a Dubai studio. Vertical 9:16, 1080×1920,
 4. **Voice swap:** Seedance re-voices the dialogue, so each speaker's segment was passed through Cartesia's voice changer
    back into the real Ahmed and Kamran voices. Timing is unchanged, so the lip-sync holds
    (`trailer/audio/voice_swapped/`, `tools/vc_shot.py`).
-5. **Edit:** `tools/assemble.py` with `tools/trailer_plan.json`. It upscales to 1080×1920, adds word-timed captions with cyan
+5. **Voice clean-up** (`tools/clean_voice.py`): the animation audio is de-reverbed and denoised before conversion, then
+   each converted track gets WPE de-reverb, RNNoise (voice model), gentle spectral denoise, de-click, EQ (mud cut,
+   presence, air), de-ess and light levelling. It was tuned so quiet consonants survive: an earlier, harder setting
+   swallowed the "Cl" in "Claude". Cleaned tracks are in `trailer/audio/voice_cleaned/`.
+6. **Edit:** `tools/assemble.py` with `tools/trailer_plan.json`. It upscales to 1080×1920, adds word-timed captions with cyan
    keywords, headline tags, name tags, the logo slam and an end card, then mixes dialogue, SFX and music with
    side-chain ducking to -14 LUFS.
-6. **Music and sound logo:** composed in code (`tools/music.py`, `tools/sting.py`), original and license-free.
+7. **Music and sound logo:** composed in code (`tools/music.py`, `tools/sting.py`), original and license-free.
    MoneyPrinterTurbo's bundled tracks were not used because their source is unclear (its README says they come
    from YouTube videos).
 
