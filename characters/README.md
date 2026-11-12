@@ -1,6 +1,6 @@
-# AI broadcast show — cast and set (v2)
+# ARKS Sharks — cast and set (v2)
 
-Two co-hosts for a vertical (9:16) AI talk show recorded in a Dubai studio. The earlier single-host
+Two co-hosts for ARKS Sharks, a vertical (9:16) AI talk show set in a Dubai studio. Scripts are in `../show/`. The earlier single-host
 design in `../character/` (navy suit) is superseded by this pack.
 
 | File | What it is |
