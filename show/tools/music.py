@@ -3,6 +3,8 @@ import sys, numpy as np, wave
 from scipy.signal import butter, sosfilt, fftconvolve
 SR = 44100; rng = np.random.default_rng(7)
 out, TOTAL, HIT, END = sys.argv[1], float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4])
+BED = len(sys.argv) > 5 and sys.argv[5] == "bed"   # conversation bed: no drone/riser/impacts, groove throughout
+if BED: HIT, END = 0.0, TOTAL + 0.5
 BPM = 120; BEAT = 60 / BPM; N = int(TOTAL * SR)
 L = np.zeros(N); R = np.zeros(N)
 def lp(x, f, o=2): return sosfilt(butter(o, f, 'low', fs=SR, output='sos'), x)
@@ -32,8 +34,9 @@ def note(m): return 440 * 2 ** ((m - 69) / 12)
 chords = [(57, [57, 60, 64]), (53, [53, 57, 60]), (48, [48, 52, 55]), (55, [55, 59, 62])]
 # --- hook section: low drone + ticks (0 .. HIT)
 n = int(HIT * SR); t = np.arange(n) / SR
-drone = (saw(55, n) * .5 + saw(55, n, .004) * .5); drone = lp(drone, 220) * np.minimum(1, t / 1.0) * .22
-put(drone, 0)
+if not BED:
+    drone = (saw(55, n) * .5 + saw(55, n, .004) * .5); drone = lp(drone, 220) * np.minimum(1, t / 1.0) * .22
+    put(drone, 0)
 for k in np.arange(0, HIT - .5, BEAT / 2): put(hat() * .6, k, .7, .5)
 # riser into the title hit
 rl = 2.6; n = int(rl * SR); t = np.arange(n) / SR; nz = rng.normal(0, 1, n)
@@ -42,7 +45,7 @@ for i, (a, b) in enumerate(np.linspace([300, 900], [3000, 9000], 8)):
     seg = slice(i * n // 8, (i + 1) * n // 8); riser[seg] = bp(nz, a, b)[seg]
 sweep = np.sin(2 * np.pi * np.cumsum(200 * 2 ** (3 * t / rl)) / SR) * .15
 riser = (riser * .35 + sweep) * (t / rl) ** 2
-put(riser, HIT - rl, .9, 1.0)
+if not BED: put(riser, HIT - rl, .9, 1.0)
 # impacts
 def impact(length=2.8):
     n = int(length * SR); t = np.arange(n) / SR; f = 32 + 40 * np.exp(-t / .08)
@@ -51,9 +54,10 @@ def impact(length=2.8):
     ir = rng.normal(0, 1, int(1.6 * SR)) * np.exp(-np.arange(int(1.6 * SR)) / SR / .45)
     tail = fftconvolve(crash, ir)[:n] * .03
     return sub * .9 + crash + tail
-put(impact(), HIT); put(impact(3.5), END)
+if not BED: put(impact(), HIT); put(impact(3.5), END)
 # --- groove from HIT to END-2
 g0, g1 = HIT, END - 2 * BEAT
+if BED: g1 = TOTAL - 1.0
 pad_ir = rng.normal(0, 1, int(1.2 * SR)) * np.exp(-np.arange(int(1.2 * SR)) / SR / .35)
 tb = g0; bar = 0
 while tb < g1:
@@ -92,6 +96,8 @@ L = L + fftconvolve(L, ir)[:N]; R = R + fftconvolve(R, ir[::-1].copy())[:N]
 # fade out after END hit
 fo = np.ones(N); fs = int((END + 0.2) * SR); fo[fs:] = np.linspace(1, 0, N - fs) if N > fs else 1
 L *= fo; R *= fo
+if BED:  # softer bed: gentle fade in/out
+    fi = np.minimum(1, np.arange(N) / SR / 0.6) * np.minimum(1, (N - np.arange(N)) / SR / 1.5); L *= fi; R *= fi
 st = np.stack([L, R], 1); st /= np.abs(st).max() / 0.89
 with wave.open(out, 'wb') as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((st * 32767).astype(np.int16).tobytes())

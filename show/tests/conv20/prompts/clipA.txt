@@ -1,0 +1,11 @@
+Reference image 1 is the opening frame: keep its composition and set. Reference image 2 is Ahmed and reference image 3 is Kamran: keep their faces, hair, beards and outfits identical in every frame.
+Shot (medium two-shot, slow push-in, 12 seconds): Ahmed — round full face, buzzed receding dark hair, full short black beard, camel-tan blazer over a black turtleneck, silver watch sits in the left chair; Kamran — dark wavy textured hair with short faded sides, full dark beard with a salt-and-pepper grey chin, olive-green bomber jacket over a white t-shirt, black smartwatch sits in the right chair; relaxed, holding small glasses of karak tea, talking to each other like old friends.
+Ahmed turns to Kamran with a curious, teasing look and asks: "Kamran, would you get in a taxi with no driver?" — his voice is audio reference 1.
+Kamran laughs, leans forward and answers excitedly, counting on his fingers: "Mate, you already can! Umm Suqeim and Jumeirah, since March." — his voice is audio reference 2.
+Ahmed mimes tapping a phone, then glides his flat hand forward like a car driving itself and says: "Book it on Uber or Apollo Go... and it just drives." — his voice is audio reference 3.
+Setting: a Dubai TV talk-show studio — charcoal-leather chairs on a raised circular platform with a glowing cyan edge, black podcast microphones on boom arms (never covering mouths), a small round glowing white table with glass cups of golden karak tea, studio spotlights on a black lighting truss, tall LED walls with blue-violet neural-network graphics, the Burj Khalifa at dusk through the curved window.
+Framing: keep the upper third of the frame clear (only the studio lighting truss and window there); the two men sit in the middle and lower part of the frame.
+Lighting: warm amber key light from front-left, cool cyan-violet rim light from the LED walls, light haze; teal-and-amber grade, no red tones.
+Style: high-end 3D animated feature film, natural relaxed conversation between two close friends, expressive cartoon acting, natural lip-sync, shallow depth of field, subtle film grain.
+Audio: only the voices exactly as in the reference audio, in order, plus quiet studio room tone; no music.
+No text, no subtitles, no captions, no logos, no watermark.

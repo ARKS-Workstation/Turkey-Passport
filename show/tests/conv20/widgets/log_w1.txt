@@ -1,0 +1,2 @@
+model : seedream-5-0-260128 | tokens: 14400
+saved : show/tests/conv20/widgets/w1.jpg

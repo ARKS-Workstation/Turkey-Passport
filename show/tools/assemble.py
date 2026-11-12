@@ -34,12 +34,12 @@ for k in range(len(events) - 1):  # hold each caption until the next one (no fli
     if events[k + 1][0] - events[k][1] < 0.35: events[k] = (events[k][0], events[k + 1][0], *events[k][2:])
 TOTAL_MAIN = t0
 # --- end card
-ec = plan["endcard"]; ecv = W / "endcard.mp4"; logo = plan["logo"]
-ff("-loop", "1", "-t", ec["dur"], "-i", ec["bg"], "-loop", "1", "-t", ec["dur"], "-i", logo,
+ec = plan.get("endcard") or {"dur": 0}; ecv = W / "endcard.mp4"; logo = plan["logo"]
+if ec["dur"] > 0: ff("-loop", "1", "-t", ec["dur"], "-i", ec["bg"], "-loop", "1", "-t", ec["dur"], "-i", logo,
    "-filter_complex", f"[0:v]scale=1080:1920,boxblur=18:2,eq=brightness=-0.32:saturation=0.8,format=yuv420p[bg];"
    f"[1:v]scale=900:-1,format=rgba,fade=in:st=0.15:d=0.5:alpha=1[lg];[bg][lg]overlay=(W-w)/2:620,fps=24,format=yuv420p",
    "-c:v", "libx264", "-crf", "16", ecv)
-vparts.append(ecv); dparts.append(None); sparts.append(None)
+if ec["dur"] > 0: vparts.append(ecv); dparts.append(None); sparts.append(None)
 TOTAL = TOTAL_MAIN + ec["dur"]
 # --- concat video
 lst = W / "v.txt"; lst.write_text("".join(f"file '{p}'\n" for p in vparts)); vall = W / "video_all.mp4"
@@ -53,8 +53,9 @@ def cat_audio(parts, dst):
     with wave.open(str(dst), "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(x, -1, 1) * 32767).astype(np.int16).tobytes())
 dall, sall = W / "dialogue_all.wav", W / "sfx_all.wav"; cat_audio(dparts, dall); cat_audio(sparts, sall)
 # --- music
-HIT = plan["shots"][plan["title_shot"]]["t0"] + plan["title_hit_offset"]; mus = W / "music.wav"
-run("python3", plan["music_script"], mus, f"{TOTAL + 0.5:.2f}", f"{HIT:.2f}", f"{TOTAL_MAIN + 0.05:.2f}")
+HIT = plan["shots"][plan["title_shot"]]["t0"] + plan["title_hit_offset"] if plan.get("title_shot") is not None else 0.0
+mus = W / "music.wav"
+run("python3", plan["music_script"], mus, f"{TOTAL + 0.5:.2f}", f"{HIT:.2f}", f"{TOTAL_MAIN + 0.05:.2f}", *( ["bed"] if plan.get("music_mode") == "bed" else []))
 # --- ASS overlays
 def ts(t): t = max(0, t); return f"{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}"
 CY = "&H00FFE500&"; KEY = set(plan.get("key_words", []))
@@ -75,8 +76,25 @@ for o in plan.get("overlays", []):
 for o in ec.get("texts", []):
     ass.append(f"Dialogue: 2,{ts(TOTAL_MAIN + o['start'])},{ts(TOTAL)},Tag,,0,0,0,,{{\\fad(300,0)\\pos(540,{o['y']})}}{o['text']}")
 assf = W / "overlay.ass"; assf.write_text("\n".join(ass) + "\n")
+# --- side widgets: slide + fade in, hold, fade out
+wl = plan.get("widgets", [])
+if wl:
+    inputs, fc, last = [], [], "[0:v]"
+    for k, w in enumerate(wl):
+        st = plan["shots"][w["shot"]]["t0"] + w["start"]; en = plan["shots"][w["shot"]].get("t0", 0) + w["end"] if "shot_end" not in w else plan["shots"][w["shot_end"]]["t0"] + w["end"]
+        inputs += ["-loop", "1", "-t", f"{TOTAL:.3f}", "-i", w["png"]]
+        sc = plan.get("widget_width", 900)
+        fc.append(f"[{k+1}:v]format=rgba,scale={sc}:-2,fade=in:st={st:.3f}:d=0.22:alpha=1,fade=out:st={en-0.2:.3f}:d=0.2:alpha=1[w{k}]")
+        y0 = plan.get("widget_y", 70)
+        fc.append(f"{last}[w{k}]overlay=x=(W-w)/2:y='{y0}+36*max(0\\,1-(t-{st:.3f})/0.3)':enable='between(t,{st:.3f},{en:.3f})'[v{k}]"); last = f"[v{k}]"
+    vw = W / "video_widgets.mp4"
+    ff("-i", vall, *inputs, "-filter_complex", ";".join(fc), "-map", last, "-c:v", "libx264", "-preset", "medium", "-crf", "16", "-pix_fmt", "yuv420p", vw)
+    vall = vw
 # --- title logo slam on the title shot
-lg_t = HIT; plan["title_logo_out"] = plan["shots"][plan["title_shot"]]["t0"] + plan["title_logo_out_offset"]; vfin = W / "video_titled.mp4"
+lg_t = HIT
+if plan.get("title_shot") is None:
+    plan["title_shot"] = 0; plan["title_logo_out_offset"] = -1.0; lg_t = -10.0
+plan["title_logo_out"] = plan["shots"][plan["title_shot"]]["t0"] + plan["title_logo_out_offset"]; vfin = W / "video_titled.mp4"
 ff("-i", vall, "-loop", "1", "-t", TOTAL, "-i", logo, "-filter_complex",
    f"[1:v]format=rgba,scale=w='trunc(880*(1+0.5*exp(-max(0\,t-{lg_t:.3f})*9))/2)*2':h=-2:eval=frame,"
    f"fade=in:st={lg_t:.3f}:d=0.12:alpha=1,fade=out:st={plan['title_logo_out']:.3f}:d=0.25:alpha=1[lg];"

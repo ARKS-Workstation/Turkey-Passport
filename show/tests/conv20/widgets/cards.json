@@ -1,0 +1,14 @@
+{"cards": [
+ {"id": "c1", "kind": "image", "image": "show/tests/conv20/widgets/w1.jpg", "topic": "AI IN DUBAI · ROBOTAXIS",
+  "label": "DRIVERLESS TAXIS\nARE ALREADY ON DUBAI ROADS", "source": "Source: RTA (Roads & Transport Authority)"},
+ {"id": "c2", "kind": "image", "image": "show/tests/conv20/widgets/w2.jpg", "topic": "AI IN DUBAI · ROBOTAXIS",
+  "label": "LIVE SINCE 30 MARCH 2026\nUMM SUQEIM & JUMEIRAH", "source": "Source: RTA · WAM, 30 March 2026"},
+ {"id": "c3", "kind": "image", "image": "show/tests/conv20/widgets/w3.jpg", "topic": "AI IN DUBAI · ROBOTAXIS",
+  "label": "BOOK IN THE UBER\nOR APOLLO GO APP", "source": "Source: RTA · WAM, 30 March 2026"},
+ {"id": "c4", "kind": "stat", "value": "25%", "fraction": 0.25, "bar_left": "SHARE OF ALL TRIPS", "bar_right": "BY 2030",
+  "topic": "AI IN DUBAI · ROBOTAXIS", "label": "OF DUBAI TRIPS DRIVERLESS\nBY 2030 · RTA TARGET", "source": "Source: RTA · Gulf News"},
+ {"id": "c5", "kind": "ratio", "value": "1 IN 4", "n": 1, "m": 4, "topic": "AI IN DUBAI · ROBOTAXIS",
+  "label": "ONE IN EVERY FOUR RIDES\nWITH NO DRIVER", "source": "Source: RTA 2030 target"},
+ {"id": "c6", "kind": "image", "image": "show/tests/conv20/widgets/w4.jpg", "topic": "AI IN DUBAI · ROBOTAXIS",
+  "label": "NOBODY TO ARGUE WITH…\nEXCEPT THE CAR", "accent_first": true}
+]}
