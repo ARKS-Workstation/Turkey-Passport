@@ -24,8 +24,9 @@ All tools are in `show/tools/` and run from the repository root.
 - Identity strings (repeat verbatim in every Seedance prompt):
   - Ahmed — round full face, buzzed receding dark hair, full short black beard, camel-tan blazer over a black turtleneck, silver watch
   - Kamran — dark wavy textured hair with short faded sides, full dark beard with a salt-and-pepper grey chin, olive-green bomber jacket over a white t-shirt, black smartwatch
-- Logo: `show/brand/arks_sharks_logo_shadow.png`. Episode opener: `show/final/ARKS_Sharks_Episode_Intro_v1_9x16.mp4`
-  (put it at the start of every episode).
+- Logo: `show/brand/arks_sharks_logo_shadow.png`.
+- **No opener.** Every video starts with a **2.5 s hook** (step 7). The 9.7 s brand film
+  `show/final/ARKS_Sharks_Episode_Intro_v1_9x16.mp4` is for trailers and promos only.
 - Voices (Cartesia, `sonic-3`): Ahmed `c1063679-503f-4961-b8ed-aab0ae1d924b`, Kamran `f21c147a-0d3b-4b21-ab87-bedcb1374749`.
   The Cartesia key is a network secret on this cloud environment: send `X-API-Key: proxy-injected` and the proxy fills it in.
 
@@ -51,7 +52,11 @@ All tools are in `show/tools/` and run from the repository root.
 6. **Edit:** copy `show/tools/trailer_plan.json`, then `python3 show/tools/assemble.py PLAN.json out.mp4`. That gives
    1080×1920 upscale, word-timed captions (cyan key words), headline tags, name tags, logo slam, end card, music
    bed (`music.py`, original) with side-chain ducking.
-7. **Deliver:** `python3 show/tools/finalize.py out.mp4 show/final/NAME.mp4`. That sets -14 LUFS and encodes CRF 20.
+7. **Hook (2.5 s, no opener):** pick the strongest line in the video and run `python3 show/tools/hook.py --clip CLIP.mp4 --start S --dur 2.5
+   --dialogue CLEAN.wav --lines LINES.json --line N --display "line text" --tag "HEADLINE QUESTION" --then MAIN.mp4 --out OUT.mp4`.
+   It adds the small logo, headline tag and captions, then the sound-logo hit at the cut into the main video.
+   Example: `show/final/ARKS_Sharks_Conversation_Test_Robotaxis_WithHook_9x16.mp4`.
+8. **Deliver:** `python3 show/tools/finalize.py out.mp4 show/final/NAME.mp4`. That sets -14 LUFS and encodes CRF 20.
    Check frames and transcribe the final audio, then commit and push.
 
 ## Don't

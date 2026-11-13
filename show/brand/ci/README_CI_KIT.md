@@ -23,7 +23,7 @@ Version 1.0 · November 2026 · Dubai
 | `06_Studio/` | The talk-show studio, the three standard camera framings, the exterior and opener frames |
 | `07_Graphics/` | Topic widget cards (image, stat and ratio styles), examples of captions, headline tags, name tags, logo slam, end card, and the 9:16 safe-zone diagram |
 | `08_Sound/` | Sound logo (WAV), trailer music bed and conversation music bed (MP3), all original and licence-free |
-| `09_Video_References/` | Approved trailer (55 s) and the fixed episode opener (9.7 s) |
+| `09_Video_References/` | Approved trailer (55 s), a hook example (2.5 s hook + conversation) and the brand film (9.7 s, trailers and promos only) |
 | `10_Production/` | Character identity prompts, voice details and the production recipe |
 
 ---
@@ -79,6 +79,10 @@ booms, and a round glowing table with karak. The grade is teal and amber; key li
 - The hosts' **own voices** only (cloned with their consent), UK English with their natural accents.
 - Sound logo: drone, riser, impact, then the three-note motif **A–E–A**.
 - Master at **−14 LUFS**, true peak ≤ −1.5 dBTP. Music sits 18–20 dB under the dialogue.
+
+### Video structure
+**No opener.** Every video starts with a **2.5 s hook**: the strongest line, a headline tag, the small logo and captions.
+Then the sound-logo hit cuts into the conversation.
 
 ### Tone
 UK English, short and spoken, light Arabic flavour (*Yalla, Habibi, Wallah, Shukran*). Two mates who know their stuff:

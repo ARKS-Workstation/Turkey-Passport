@@ -11,7 +11,7 @@ note=lambda m: 440*2**((m-69)/12)
 t=np.arange(int(HIT*SR))/SR
 drone=lp(saw(55,len(t))+saw(55,len(t),.005)+.6*saw(82.4,len(t),-.003),300)*(t/HIT)**1.5*.25
 put(drone,0)
-rl=2.2; n=int(rl*SR); tt=np.arange(n)/SR; nz=rng.normal(0,1,n); r=np.zeros(n)
+rl=min(2.2, max(0.3, HIT-0.05)); n=int(rl*SR); tt=np.arange(n)/SR; nz=rng.normal(0,1,n); r=np.zeros(n)
 for i,(a,b) in enumerate(np.linspace([250,800],[2500,8000],8)): s=slice(i*n//8,(i+1)*n//8); r[s]=bp(nz,a,b)[s]
 riser=(r*.3+np.sin(2*np.pi*np.cumsum(180*2**(3.2*tt/rl))/SR)*.12)*(tt/rl)**2.2
 put(riser,HIT-rl,.8,1)

@@ -118,7 +118,7 @@ about the newest AI tools, what AI means for Dubai, and the funniest things AI h
  <div class="card"><h3>Honest</h3><p>Every claim has a source on screen. AI-made pictures are labelled "Illustration".</p></div>
 </div>
 <h3 style="margin-top:22px">Episode structure</h3>
-<div class="tl"><div style="flex:1; background:#00E5FF">Cold open<br>hook</div><div style="flex:1.1; background:#6CE6F5">Intro<br>(fixed opener)</div>
+<div class="tl"><div style="flex:0.9; background:#00E5FF">Hook<br>2.5 s</div>
 <div style="flex:2.2; background:#2B4FBF; color:#fff">What's new<br>in AI</div><div style="flex:1.6; background:#8B5CF6; color:#fff">AI in<br>Dubai</div>
 <div style="flex:1.6; background:#E39A3B">Funny corner<br>AI fails</div><div style="flex:1; background:#E9EDF0">Tip &amp;<br>sign-off</div></div>
 </div>
@@ -287,7 +287,7 @@ pages.append(page(13, "11 · Studio lighting & framing", f"""<div class="content
  <div><img src="{A}/kf_two.jpg" class="fill" style="height:400px"><div class="cap">Two-shot: the default conversation frame.</div></div>
  <div><img src="{A}/kf_ahm.jpg" class="fill" style="height:400px"><div class="cap">Close-up, Ahmed: punchlines, questions.</div></div>
  <div><img src="{A}/kf_kam.jpg" class="fill" style="height:400px"><div class="cap">Close-up, Kamran: reactions, stories.</div></div>
- <div><img src="{A}/in_dive.jpg" class="fill" style="height:400px"><div class="cap">Exterior: the opener only.</div></div>
+ <div><img src="{A}/in_dive.jpg" class="fill" style="height:400px"><div class="cap">Exterior: brand film and trailer titles only.</div></div>
  <div class="card">{spec_table([("Key light", "Warm amber, front-left"), ("Rim light", "Cool cyan-violet from the LED walls"), ("Atmosphere", "Light haze in the spotlight beams"),
                                 ("Grade", "Teal and amber, rich but natural skin"), ("Lens", "Shallow depth of field, subtle film grain"), ("Camera", "Slow push-ins and gentle arcs; hard cuts between shots"),
                                 ("Never", "Red tones, harsh flat light, daylight scenes")])}</div>
@@ -328,12 +328,12 @@ pages.append(page(15, "13 · On-screen graphics", f"""<div class="content">
 pages.append(page(16, "14 · Motion & editing", f"""<div class="content">
 <div class="sec">14 · Motion &amp; editing</div><h1 style="margin-bottom:12px">Hook fast, then talk like friends</h1>
 <div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1.3fr; gap:16px">
- <div><img src="{A}/in_burj.jpg" class="fill" style="height:300px"><div class="cap">Opener 0–4 s: holographic circuit shark around the Burj Khalifa.</div></div>
- <div><img src="{A}/in_dive.jpg" class="fill" style="height:300px"><div class="cap">4–6 s: it dives through the studio glass.</div></div>
- <div><img src="{A}/in_logo.jpg" class="fill" style="height:300px"><div class="cap">6–9.7 s: lights up, logo lands, sonic logo.</div></div>
+ <div><img src="{A}/hook_frame.jpg" class="fill" style="height:300px"><div class="cap"><b>0–2.5 s: the hook.</b> Strongest line, headline tag, small logo, captions. No opener.</div></div>
+ <div><img src="{A}/in_dive.jpg" class="fill" style="height:300px"><div class="cap">Brand film (trailers and promos only): the shark dives through the studio glass.</div></div>
+ <div><img src="{A}/in_logo.jpg" class="fill" style="height:300px"><div class="cap">Brand film end: lights up, logo lands, sonic logo.</div></div>
  <div class="card"><h3>Editing rules</h3><ul>
  <li><b>Hook in the first 3 s</b>, with on-screen text from frame 1.</li><li>Trailers: a new cut every 2–4 s. Episodes: let conversations breathe.</li>
- <li>Every episode starts with the fixed opener (9.7 s).</li><li>Hard cuts between shots; no flashy transitions.</li>
+ <li><b>No opener.</b> Every video starts with a 2.5 s hook, then the sound-logo hit cuts into the conversation.</li><li>Hard cuts between shots; no flashy transitions.</li>
  <li>Captions on everything: most viewers watch muted.</li><li>Cover AI glitches (outfit morphs, odd hands) with a reaction cutaway.</li></ul></div>
 </div>
 <h3 style="margin-top:18px">Approved trailer structure (55 s)</h3>
@@ -354,7 +354,7 @@ pages.append(page(17, "15 · Sound identity", f"""<div class="content">
  <div class="card"><h3>Loudness</h3>{spec_table([("Master", "−14 LUFS integrated"), ("True peak", "≤ −1.5 dBTP"), ("Music bed", "18–20 dB under dialogue, side-chain ducked"), ("SFX", "6 dB under dialogue")])}</div>
 </div>
 <div class="grid g2" style="gap:18px; margin-top:16px">
- <div class="card"><h3>Sonic logo</h3><p>Low drone → riser → sub impact, then a bright three-note motif <b>A – E – A</b> with a shimmer tail. Plays with the logo at the end of the opener and on title slams.</p></div>
+ <div class="card"><h3>Sonic logo</h3><p>Low drone → riser → sub impact, then a bright three-note motif <b>A – E – A</b> with a shimmer tail. Plays as the hook cuts into the conversation, and on title slams.</p></div>
  <div class="card"><h3>Music</h3><p>Original, licence-free beds made for the show: 120 BPM cinematic electronic, chords Am – F – C – G. Trailer mode has the hook drone, riser and impacts; conversation mode is a soft groove.
  <b>Never</b> use tracks with unclear rights.</p></div>
 </div></div>"""))
@@ -385,7 +385,7 @@ pages.append(page(19, "17 · Technical specs & asset index", f"""<div class="con
    ("Recipe", "<span class='mono'>.claude/skills/arks-sharks-video/SKILL.md</span>"), ("Tools", "<span class='mono'>show/tools/</span> (generation, voice swap, clean-up, widgets, assembly, finalise)")])}</div>
  <div class="card">{spec_table([("Logo", "<span class='mono'>show/brand/arks_sharks_logo_*.png / .jpg</span>"), ("Characters", "<span class='mono'>characters/ahmed/, characters/kamran/</span> (masters, expressions)"),
    ("Studio", "<span class='mono'>show/trailer/keyframes/talkshow_studio.jpg, kf_two/kf_ahm/kf_kam.jpg</span>"), ("Approved trailer", "<span class='mono'>show/final/ARKS_Sharks_Trailer_v1_APPROVED_9x16.mp4</span>"),
-   ("Opener", "<span class='mono'>show/final/ARKS_Sharks_Episode_Intro_v1_9x16.mp4</span>"), ("Widget style", "<span class='mono'>show/tools/widgets.py</span> + example cards in <span class='mono'>show/tests/conv20/</span>"),
+   ("Hook", "<span class='mono'>show/tools/hook.py</span> (2.5 s, no opener). Brand film for trailers: <span class='mono'>show/final/ARKS_Sharks_Episode_Intro_v1_9x16.mp4</span>"), ("Widget style", "<span class='mono'>show/tools/widgets.py</span> + example cards in <span class='mono'>show/tests/conv20/</span>"),
    ("Prompts", "<span class='mono'>show/trailer/prompts/</span> (identity strings, set, lighting)"), ("This book", "<span class='mono'>show/brand/ci/build_ci.py</span> rebuilds it")])}</div>
 </div>
 <p class="cap" style="margin-top:12px">Identity strings for generation: <b>Ahmed</b>: round full face, buzzed receding dark hair, full short black beard, camel-tan blazer over a black turtleneck, silver watch.

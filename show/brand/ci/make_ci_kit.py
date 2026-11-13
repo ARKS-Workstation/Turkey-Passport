@@ -147,7 +147,8 @@ for src, dst in [("bed_trailer.wav", "ARKS_Sharks_Music_Trailer_Bed_40s.mp3"), (
 # 09 video references
 V = d("09_Video_References")
 cp("show/final/ARKS_Sharks_Trailer_v1_APPROVED_9x16.mp4", V / "ARKS_Sharks_Trailer_v1_APPROVED_9x16.mp4")
-cp("show/final/ARKS_Sharks_Episode_Intro_v1_9x16.mp4", V / "ARKS_Sharks_Episode_Opener_v1_9x16.mp4")
+cp("show/final/ARKS_Sharks_Episode_Intro_v1_9x16.mp4", V / "ARKS_Sharks_Brand_Film_TrailersOnly_9x16.mp4")
+cp("show/final/ARKS_Sharks_Conversation_Test_Robotaxis_WithHook_9x16.mp4", V / "ARKS_Sharks_Hook_Example_9x16.mp4")
 
 # 10 production
 P = d("10_Production")
