@@ -65,6 +65,7 @@ ass = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920"
        "Style: Cap,Inter Display Black,82,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,6,3,2,90,90,470,1",
        "Style: Hook,Inter Display Black,64,&H00000000,&H00000000,&H00FFE500,&H00FFE500,0,0,0,0,100,100,2,0,3,18,0,8,80,80,250,1",
        "Style: Name,Inter Display ExtraBold,46,&H00FFFFFF,&H00FFFFFF,&H00402010,&H00402010,0,0,0,0,100,100,3,0,3,12,0,1,0,0,0,1",
+       "Style: Badge,Inter Display ExtraBold,30,&H00FFFFFF,&H00FFFFFF,&H00402010,&H00402010,0,0,0,0,100,100,2,0,3,10,0,1,0,0,0,1",
        "Style: Tag,Inter Display Black,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,6,0,1,4,2,8,60,60,0,1",
        "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 for st, en, txt, who in events:

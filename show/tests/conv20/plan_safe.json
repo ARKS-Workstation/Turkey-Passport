@@ -1,0 +1,130 @@
+{
+ "work": "show/_work/conv20_safe",
+ "logo": "show/brand/arks_sharks_logo_shadow.png",
+ "music_script": "show/tools/music.py",
+ "music_mode": "bed",
+ "title_shot": null,
+ "key_words": [
+  "DUBAI",
+  "2030",
+  "RTA",
+  "QUARTER",
+  "UBER",
+  "APOLLO",
+  "GO",
+  "DRIVERLESS",
+  "TAXI",
+  "TAXIS",
+  "JUMEIRAH",
+  "SUQEIM",
+  "HABIBI",
+  "FOUR"
+ ],
+ "shots": [
+  {
+   "clip": "show/tests/conv20/clips/clipA.mp4",
+   "in": 0.0,
+   "out": 12.06,
+   "dialogue": "show/tests/conv20/audio/vc/A_clean.wav",
+   "lines": "show/tests/conv20/audio/vc/A_lines.json",
+   "display": [
+    "Kamran, would you get in a taxi with no driver?",
+    "Mate, you already can! Umm Suqeim and Jumeirah, since March.",
+    "Book it on Uber or Apollo Go... and it just drives."
+   ]
+  },
+  {
+   "clip": "show/tests/conv20/clips/clipB.mp4",
+   "in": 0.0,
+   "out": 12.3,
+   "dialogue": "show/tests/conv20/audio/vc/B_clean.wav",
+   "lines": "show/tests/conv20/audio/vc/B_lines.json",
+   "display": [
+    "By 2030, the RTA wants a quarter of all trips driverless.",
+    "One in four taxis... and nobody to argue with about the route!",
+    "Habibi, you'd argue with the car!"
+   ]
+  }
+ ],
+ "overlays": [
+  {
+   "shot": 0,
+   "start": 0.15,
+   "end": 4.2,
+   "style": "Name",
+   "text": "AHMED",
+   "x": 90,
+   "y": 1190
+  },
+  {
+   "shot": 0,
+   "start": 0.15,
+   "end": 4.2,
+   "style": "Name",
+   "text": "KAMRAN",
+   "x": 610,
+   "y": 1190
+  },
+  {
+   "shot": 0,
+   "start": 0.0,
+   "end": 12.06,
+   "style": "Badge",
+   "text": "AI-GENERATED \u00b7 ANIMATED",
+   "x": 64,
+   "y": 1556
+  },
+  {
+   "shot": 1,
+   "start": 0.0,
+   "end": 12.3,
+   "style": "Badge",
+   "text": "AI-GENERATED \u00b7 ANIMATED",
+   "x": 64,
+   "y": 1556
+  }
+ ],
+ "widget_width": 800,
+ "widget_y": 58,
+ "widgets": [
+  {
+   "png": "show/tests/conv20/widgets/cards_safe/c1.png",
+   "shot": 0,
+   "start": 0.0,
+   "end": 3.02
+  },
+  {
+   "png": "show/tests/conv20/widgets/cards_safe/c2.png",
+   "shot": 0,
+   "start": 3.02,
+   "end": 8.04
+  },
+  {
+   "png": "show/tests/conv20/widgets/cards_safe/c3.png",
+   "shot": 0,
+   "start": 8.04,
+   "end": 12.06
+  },
+  {
+   "png": "show/tests/conv20/widgets/cards_safe/c4.png",
+   "shot": 1,
+   "start": 0.0,
+   "end": 4.72
+  },
+  {
+   "png": "show/tests/conv20/widgets/cards_safe/c5.png",
+   "shot": 1,
+   "start": 4.72,
+   "end": 8.64
+  },
+  {
+   "png": "show/tests/conv20/widgets/cards_safe/c6.png",
+   "shot": 1,
+   "start": 8.64,
+   "end": 12.3
+  }
+ ],
+ "endcard": {
+  "dur": 0
+ }
+}
